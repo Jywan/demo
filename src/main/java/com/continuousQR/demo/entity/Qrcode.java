@@ -11,8 +11,15 @@ import org.springframework.data.redis.core.RedisHash;
 public class Qrcode {
 
     @Id
-    private String tid;             //고유번호
-    private String cnt;             //연속카운트
-    private String hold_time;       //유지시간
+    private String tid;             //transaction_ID
+    private int total_cnt;
+    private int current_cnt;
+    private String hold_time;
 
+    public Qrcode(String tid){
+        this.tid = tid;
+//        this.total_cnt = total_cnt;
+//        this.current_cnt = current_cnt+1;
+//        this.hold_time = hold_time;
+    }
 }
